@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Datos Económicos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <h1>PIB per cápita Siglo XXI</h1>
+
+        <p class="descripcion">
+            Consulte la evolución del PIB per cápita de diferentes países.
+        </p>
+
+
+        <!-- PANEL DE CONSULTA -->
+
+        <section class="panel">
+
+            <h2>Consultar datos</h2>
+
+            <div class="controles">
+
+                <!-- País -->
+
+                <div class="campo campo-pais">
+
+                    <label for="pais">País</label>
+
+                    <div class="buscador-pais">
+
+                        <input
+                            type="text"
+                            id="pais"
+                            placeholder="Seleccionar país"
+                            autocomplete="off"
+                        >
+
+                        <div id="sugerenciasPais"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Año inicial -->
+
+                <div class="campo">
+
+                    <label for="añoInicio">Año inicial</label>
+
+                    <input
+                        type="number"
+                        id="añoInicio"
+                        value="2000"
+                        min="2000"
+                        max="2025"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Año final -->
+
+                <div class="campo">
+
+                    <label for="añoFin">Año final</label>
+
+                    <input
+                        type="number"
+                        id="añoFin"
+                        value="2025"
+                        min="2000"
+                        max="2025"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Botón -->
+
+                <div class="campo boton-campo">
+
+                    <button id="consultar">
+                        Consultar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="resultados">
+
+            <div id="resultado"></div>
+
+
+            <!-- GRÁFICO -->
+
+            <div class="grafico-contenedor">
+
+                <canvas id="grafico"></canvas>
+
+            </div>
+
+
+            <!-- TABLA -->
+
+            <div class="tabla-contenedor">
+
+                <table id="tablaDatos">
+
+                    <thead>
+
+                        <tr>
+                            <th>País</th>
+                            <th>Año</th>
+                            <th>Indicador</th>
+                            <th>Valor</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="cuerpoTabla"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
