@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "https://proyect-data-xix-api.onrender.com";
 
 const inputPais = document.getElementById("pais");
 const sugerenciasPais = document.getElementById("sugerenciasPais");
